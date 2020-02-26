@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="icon" href="{% static 'first/images/icon.png' %}">
+    <style>
+        html {
+            background:url("{% static 'first/images/bg.png' %}") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-color: hsla(0, 0%, 0%, 0.01);
+        }
+
+        .ui-autocomplete {
+            height: 100px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        
+    </style>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'first/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <script type="text/javascript" src="{% static 'first/jsfile.js' %}"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <div class="dock" id="dock">
+        <a target="_new" href="www.facebook.com"><i class="fa fas fa-facebook" id="fas"></i></a>
+        <a target="_new" href="www.linkedin.com"><i class="fa fas fa-linkedin"></i></a target="_new">
+    </div>
+    <p>{{errorMsg}}</p>
+    <form action="/details" method="POST">{% csrf_token %}
+        <div class="container">
+            <div class="logo"><img src="{% static 'first/images/logo.png' %}" width="400px" id="logo"></div>
+            <div class="searchbar">
+
+                <input type="text" id="automplete-1" class="searchtext search-dock" name="Que" placeholder="Ask"
+                    required autofocus size="10">
+                <p class="hint">For accurate result please search for specific words.</p>
+                <span name="micbtn" id="mic" class="audiobutton"><i class="fa fa-microphone"
+                        id="fa-microphone"></i></span>
+
+            </div>
+            <div class="submit"><button type="submit" id="submitbutton" class="searchbutton">SEARCH</button></div>
+        </div>
+    </form>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+    <script>
+        gsap.to('#logo', { opacity: 1, duration: 1, y: 20 })
+        gsap.from('#dock', { opacity: 0, duration: 4, x: 1000 })
+    </script>
+</body>
+
+</html>
