@@ -48,7 +48,6 @@ multiprocessing
 Flask-cors
 glob2
 multipledispatch
-nltk
 opencv-python
 PyDictionary
 scikit-image
