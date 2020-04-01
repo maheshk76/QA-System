@@ -1,4 +1,4 @@
-https://download.pytorch.org/whl/torch_stable.html/cpu/torch-0.4.0-cp35-cp35m-win_amd64.whl
+torch==0.1.2+cpu
 asgiref==3.2.7
 beautifulsoup4==4.8.2
 certifi==2019.11.28
