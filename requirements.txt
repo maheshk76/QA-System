@@ -1,4 +1,4 @@
-torch==0.1.2+cpu
+numpy
 asgiref==3.2.7
 beautifulsoup4==4.8.2
 certifi==2019.11.28
