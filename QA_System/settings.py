@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 't)f9k33zk3$2te0!1(n^dosvkx0w%8c#z^9mz9e8-hb7#5n*ng'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['maheshk24.herokuapp.com']
 # Application definition
@@ -120,7 +120,7 @@ USE_TZ = True
 
 #changed here=>  STATIC_URL = '/static/'
 #aaded for deploy
-PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
+PROJECT_ROOT   =  os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
