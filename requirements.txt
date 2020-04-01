@@ -1,3 +1,4 @@
+https://download.pytorch.org/whl/torch_stable.html/cpu/torch-0.4.0-cp35-cp35m-win_amd64.whl
 asgiref==3.2.7
 beautifulsoup4==4.8.2
 certifi==2019.11.28
@@ -33,6 +34,4 @@ uritemplate==3.0.1
 urllib3==1.25.8
 Werkzeug==1.0.0
 wikipedia==1.4.0
-https://download.pytorch.org/whl/cpu/torch-1.3.1%2Bcpu-cp37-cp37m-linux_x86_64.whl
-https://download.pytorch.org/whl/cpu/torchvision-0.4.2%2Bcpu-cp37-cp37m-linux_x86_64.whl
 djangoajax
