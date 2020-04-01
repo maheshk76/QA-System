@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> {% if data1 %}
+    <title>{{title}}-Gotcha Search</title>
+    {% else %}
+    <title>Not Found</title>
+    {% endif %} {% load static %}
+
+    <link rel="icon" href="{% static 'first/images/icon.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'first/details.css' %}">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        html {
+            background: url("{% static 'first/images/bg.png' %}") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        .ui-autocomplete {
+            height: 100px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+    </style>
+    <script src="{% static 'first/jsfile.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'first/scroll-beh.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="Queform" action="/details" class="header" method="POST">{% csrf_token %}
+            <a href="/index/" class="logo"><img src="{% static 'first/images/logo.png' %}" width="130px"></a>
+            <input type="text" class="searchtext search-dock" id="automplete-1" name="Que" placeholder="Ask">
+
+            <span title="Speak" class="audiobutton" id="mic"><i class="fa fa-microphone" id="fa-microphone"></i></span>
+            <button type="submit" class="searchbutton" id="submitbutton">SEARCH</button>
+        </form>
+        <div class="content" id="content">
+            {% if data1 %}
+            <div class="block">
+                <p id="soundbutton"><i class="fa fa-volume-up"></i>
+                    <span id="anim"></span></p>
+                <p class="accurate" id="accurate">{{title}}</p>
+                <p class="data" id="data">{{data1}}</p>
+                <p class="retime">Result in {{ti}}s</p>
+            </div>
+            {% else %}
+            <div class="error">
+                <img class="center-block" style="margin-top:10px" height="71%" width="100%" src="{% static 'first/images/wip4.svg' %}" alt="error" class="wipimg">
+                <h4 class="text-center" style="color:lightcoral">Oops,Something went wrong !!!</h4>
+            </div>
+            {% endif %}
+        </div>
+        {% if data1 %}
+        <div class="references">
+            <div class="links">
+                <h3>References</h3>
+                {% for e in refrences %}
+                <a class="reflinks" target="_new" href="https://en.wikipedia.org/{{e}}">
+                 {{e}}</a> {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        <div class="report">
+            <h4>Did you find the infomation you were looking for?</h4>
+            <div class="yesbutton rbutton" onclick="yesbutton()">YES</div>
+            <div class="nobutton rbutton" onclick="reportdock()">NO</div>
+            <p id="ok"></p>
+            <div class="answer-dock" id="answer-dock">
+                <input type="text" name="reportanswer" id="suganswer" placeholder="suggest an answer" class="reportanswer" />
+                <button class="answersubmit" id="suggestanswer">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+    <script>
+        gsap.from('#content', {
+            opacity: 0,
+            duration: 1
+        })
+        flag = 1;
+        var ab = document.getElementById("answer-dock");
+
+        function yesbutton() {
+            document.getElementById('ok').innerHTML = "Thank you for your response.";
+            ab.style.display = 'none';
+        }
+
+        function reportdock() {
+            document.getElementById('ok').innerHTML = "";
+            if (flag == 0) {
+                ab.style.display = 'none';
+                flag = 1;
+            } else {
+                ab.style.display = 'block';
+                flag = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>

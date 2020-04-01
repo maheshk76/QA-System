@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="icon" href="{% static 'first/images/icon.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'first/about.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'first/scroll-beh.css' %}">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="display-3 text-center font-weight-normal head">About us</div>
+        <div class="social float-right">
+            <a href="#myteam">Meet our team</a>
+        </div>
+    </div>
+
+    <div class="fluid-container">
+        <h1 class="display-4 text-center heading text-muted">What we are?</h1>
+        <h5 class="content">
+            Founded in 2020, Gotcha is a global pioneer in the world of analytical insight. Our vast experience means we've dealt with all of the pitfalls and tripped over all of the landmines, and over time, developed the most robust and accurate web analytics service
+            of any provider. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae corporis tempora fugiat soluta exercitationem cum sapiente ducimus, obcaecati eveniet rerum in, natus ut cumque sunt aut, quis accusamus dicta omnis?<br><br>
+            <hr>
+        </h5>
+
+        <h1 class="display-4 text-center heading text-muted">What we do?</h1>
+        <h5 class="content">
+            At Gotcha, we focus exclusively on delivering the richest and most meaningful analytics information for our customers. Our obsession is to empower customers through compelling and actionable insights that drive measurable results for their business. At
+            Gotcha, we believe strongly in substance over style, which means you can count on getting the exact insights you need without having to navigate through extraneous content to get the information you need right now. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Enim soluta, possimus praesentium ducimus provident sequi atque alias veritatis similique asperiores quidem voluptas ipsa laboriosam tenetur minima odit illum sed molestiae. Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Accusantium quam deleniti impedit deserunt obcaecati inventore, laudantium quos esse, ducimus ad eos neque libero soluta! Beatae, voluptatibus at. Assumenda, deleniti modi!<br><br>
+            <hr>
+        </h5>
+        <div class="available">
+            <h1 class="display-4 text-center heading text-muted">Available on</h1>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="{% static 'first/images/mobile.png' %}" alt="" width="1500px">
+                </div>
+                <div class="col-sm-6 data">
+                    <a href="#" class="links">www.gotcha.com</a>
+                    <br><br><br>
+                    <h5 class="text-muted">Available Soon</h5>
+                    <h3>Google Play Store</h3>
+                    <h3>Apple App Store</h3>
+                    <h3>Microsoft Store</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="card col-lg-2" style="width:300px">
+                <img class="card-img-top chefimg" src="{% static 'first/images/HAP.jpg' %}" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h5 class="card-title">Prof. Hariom Pandya</h5>
+                    <hr>
+                    <p class="card-text font-italic">Mentor</p>
+                </div>
+            </div>
+        </div>
+
+        <h1 id="myteam" class="display-4 text-center heading text-muted">The Team</h1>
+        <div class="row text-center">
+            <div class="card col-lg-2" style="width:300px">
+                <img class="card-img-top chefimg" src="{% static 'first/images/Mahesh.jpg' %}" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h5 class="card-title">Mahesh Kantariya</h5>
+                    <hr>
+                    <p class="card-text font-italic">Critical Problem Solver<br>Head of Testing</p>
+                </div>
+            </div>
+            <div class="card col-lg-2" style="width:300px">
+                <img class="card-img-top chefimg chefimg-fix" src="{% static 'first/images/2.jpg' %}" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h5 class="card-title">Arya Kagathara</h5>
+                    <hr>
+                    <p class="card-text font-italic">Web Designer<br>Head of Business Development</p>
+                </div>
+            </div>
+            <div class="card col-lg-2" style="width:300px">
+                <img class="card-img-top chefimg chefimg-fix" src="{% static 'first/images/3.jpg' %}" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h5 class="card-title">Anshuman Aich</h5>
+                    <hr>
+                    <p class="card-text font-italic">Chief Techenical officer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
