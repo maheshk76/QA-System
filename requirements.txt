@@ -1,7 +1,7 @@
 http://download.pytorch.org/whl/cpu/torch-0.4.1-cp36-cp36m-linux_x86_64.whl
 numpy
 spacy
-en-core-wen-sm
+en-core-web-sm
 asgiref==3.2.7
 beautifulsoup4==4.8.2
 certifi==2019.11.28
