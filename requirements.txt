@@ -45,7 +45,6 @@ psycopg2
 regex
 collections
 multiprocessing
-Flask
 Flask-cors
 glob2
 multipledispatch
