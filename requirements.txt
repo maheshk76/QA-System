@@ -33,6 +33,6 @@ uritemplate==3.0.1
 urllib3==1.25.8
 Werkzeug==1.0.0
 wikipedia==1.4.0
-torch==1.4.0+cpu
-torchvision==0.5.0+cpu
+torch+cpu
+torchvision+cpu
 djangoajax
