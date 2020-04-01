@@ -1,7 +1,6 @@
 http://download.pytorch.org/whl/cpu/torch-0.4.1-cp36-cp36m-linux_x86_64.whl
 numpy
 spacy
-https://github.com/explosion/spacy-models/releases/download/en_vectors_web_lg-2.1.0/en_vectors_web_lg-2.1.0.tar.gz
 asgiref==3.2.7
 beautifulsoup4==4.8.2
 certifi==2019.11.28
@@ -43,8 +42,6 @@ dj-database-url
 whitenoise 
 psycopg2
 regex
-collections
-multiprocessing
 Flask-cors
 glob2
 multipledispatch
