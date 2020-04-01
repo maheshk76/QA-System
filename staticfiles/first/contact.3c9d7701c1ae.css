@@ -1,0 +1,101 @@
+.jumbotron {
+    background: #6C63FF;
+    filter: brightness(90%);
+}
+
+.social>a {
+    color: #0073b1;
+    font-size: 30px;
+}
+
+.head {
+    font-size: 250%;
+}
+
+.row {
+    margin: 100px auto;
+}
+
+.form1 {
+    min-width: 700px;
+}
+
+.heading {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.title {
+    font-size: 24px;
+    opacity: 80%;
+    font-weight: 600;
+    margin-top: 10px;
+    width: 35ch;
+}
+
+form {
+    margin: 30px 0;
+}
+
+.input {
+    font-size: 18px;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 20px 0;
+    display: block;
+    transition: .1s;
+    box-shadow: 0 0 2px 1px gray;
+}
+
+.input:focus {
+    border: 2px solid #6C63FF;
+}
+
+textarea {
+    height: 200px;
+}
+
+.submit {
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    color: white;
+    background: black;
+    padding: 12px 16px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    border: none;
+    box-shadow: 0px 0px 20px 3px grey, inset 0 0 0 0 black;
+    border-bottom: 3px solid rgba(97, 89, 229, 1);
+    transition: .5s;
+}
+
+.submit:hover {
+    box-shadow: 0px 0px 10px 1px rgba(97, 89, 229, 1), inset 0 0 0 400px rgba(97, 89, 229, 1);
+    color: black;
+}
+
+@media screen and (max-width:768px) {
+    .form2 {
+        margin-top: 50px;
+    }
+    .form1 {
+        min-width: 0;
+    }
+    .heading {
+        font-size: 36px;
+        font-weight: 700;
+    }
+    .title {
+        font-size: 24px;
+        opacity: 80%;
+        font-weight: 600;
+        margin-top: 10px;
+        width: 70%;
+    }
+    .input {
+        width: 100%;
+    }
+}
