@@ -1,4 +1,5 @@
 $(function() {
+
     $("#Queform").submit(function() {
         $("#searchloader").addClass("linear-activity");
         $("#automplete-1").blur();
@@ -42,6 +43,7 @@ $(function() {
     setTimeout(function() { $("#automplete-1").focus(); }, 3000);
     var words_arr = [];
     $('#spi').addClass("spinner");
+    $('#mic').css("pointer-events", "none");
     $.ajax({
         url: '/getwords',
         type: 'GET',
@@ -54,7 +56,10 @@ $(function() {
         },
         error: function(response) {}
     }).always(function() {
-        setTimeout(function() { $('#spi').removeClass("spinner"); }, 2000);
+        setTimeout(function() {
+            $('#spi').removeClass("spinner");
+            $('#mic').css("pointer-events", "");
+        }, 2000);
     });
     $("#automplete-1").autocomplete({
         maxResults: 10,
@@ -88,7 +93,7 @@ $(function() {
     //speech to text
     $('#mic').click(function() {
         $("#automplete-1").val("Listening...");
-        $("#automplete-1").css("pointer-events", "none");
+        $("#automplete-1,#submitbutton").css("pointer-events", "none");
         $('#mic').addClass("Rec");
         $.ajax({
             url: '/openmic',
@@ -110,7 +115,7 @@ $(function() {
             }
         }).always(function() {
             $('#mic').removeClass("Rec");
-            $("#automplete-1").css("pointer-events", "");
+            $("#automplete-1,#submitbutton").css("pointer-events", "");
         });
     });
 });
