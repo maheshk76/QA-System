@@ -39,3 +39,4 @@ execute following commnad to run project
   ```bash
 python manage.py runserver
 ```
+Open https://localhost:8000 and enjoy it.
