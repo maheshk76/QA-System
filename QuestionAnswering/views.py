@@ -29,7 +29,7 @@ from email.mime.multipart import MIMEMultipart
 nltk.download('words')
 r=sr.Recognizer()
 answer=""
-wh_q_list=['when','where','whose','which','who','whom','why','how','in','on','is','was','are','will','can','from']
+wh_q_list=['what','when','where','whose','which','who','whom','why','how','in','on','is','was','are','will','can','from']
 def contact(request):
     return render(request,'contact.html',context=None)
 def documentation(request):
