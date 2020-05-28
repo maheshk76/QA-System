@@ -68,6 +68,42 @@ $(function() {
         multipleSeparator: " ",
         source: words_arr
     });
+    // For multiple words suggestion
+
+    // function split(val) {
+    //     return val.split(/ \s*/);
+    // }
+
+    // function extractLast(term) {
+    //     return split(term).pop();
+    // }
+
+    // $("#automplete-1")
+    //     .autocomplete({
+    //         minLength: 0,
+    //         source: function(request, response) {
+    //             response($.ui.autocomplete.filter(
+    //                 words_arr, extractLast(request.term)));
+    //         },
+    //         focus: function() {
+    //             return false;
+    //         },
+    //         select: function(event, ui) {
+    //             var terms = split(this.value);
+    //             // remove the current input
+    //             terms.pop();
+    //             // add the selected item
+    //             terms.push(ui.item.value);
+    //             // add placeholder to get the comma-and-space at the end
+    //             terms.push("");
+    //             this.value = terms.join(" ");
+    //             return false;
+    //         }
+    //     });
+
+    //new end
+
+
     $.ui.autocomplete.filter = function(array, term) {
         var matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex(term), "i");
         return $.grep(array, function(value) {

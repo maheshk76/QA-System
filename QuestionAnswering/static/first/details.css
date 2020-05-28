@@ -104,6 +104,11 @@
     overflow-y: scroll;
 }
 
+#suggestanswer,
+#suganswer {
+    pointer-events: none;
+}
+
 .references {
     grid-column: 2/10;
     grid-row: 7/10;
